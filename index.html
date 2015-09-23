@@ -41,7 +41,61 @@
         </div>
     </nav>
 
+    <!-- Drag and Drop. -->
+    <h3>Drag and Drop példa</h3>
+    <div class="container drop-container">
+      
+      <!-- Forrás div. -->
+       <div class="source" 
+          ondragover="allowDrop(event)" 
+            onmouseover="allowDrop(event)" 
+           onmouseout="dropLeaved(event)" 
+           ondrop="drop(event)">
+           
+           <p>Termékek</p>
+           
+           <img id="img1" 
+                src="http://i.mctimg.com/file/cee64d99ff852132885b99798e41f6979f25f117/r256x256/0b9b8951ef42eeff6ca2f364c02b5c1c28af25bdfe3ee4fb4eabc959c6a540cf" 
+                draggable="true" 
+                ondragstart="drag(event)"
+                data-ar="300">
+            <img id="img2" 
+                src="http://www.barquettesalimentaires.fr/2324-thickbox/barquette-salade-a-emporter-plastique-alimentaire-couvercle-750-grs.jpg" 
+                draggable="true" 
+                ondragstart="drag(event)"
+                data-ar="744">
+            <img id="img3" 
+                src="https://dtgxwmigmg3gc.cloudfront.net/files/50812258c566d7255b004328-icon-256x256.png" 
+                draggable="true" 
+                ondragstart="drag(event)"
+                data-ar="699">
+                
+            <div class="price-div"></div>
+                
+       </div>
+       
+       <!-- Cél div. -->
+       <div 
+           class="target" 
+           ondragover="allowDrop(event)" 
+            onmouseover="allowDrop(event)" 
+           onmouseout="dropLeaved(event)" 
+           ondrop="drop(event)">
+                 <p>Kosár</p>
+              
+               <div class="price-div"></div>
+               
+        </div>
+           
+        <div class="ar-div">
+            0 Ft
+        </div>
+            
+    </div>
+    <!-- /Drag and Drop. -->
+    
    <!-- Canvas. -->
+   <h3>Canvas példa</h3>
     <div class="container">
        <img id="myImg" src="img/avatar.png">
        <canvas id="myCanvas"></canvas>
@@ -49,12 +103,14 @@
    <!-- /Canvas. -->
    
     <!-- SVG. -->
+    <h3>SVG példa</h3>
     <div class="container">
        <svg>
            <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></circle>
        </svg>
     </div>
-   <!-- /SVG. -->
+    <!-- /SVG. -->
+    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
